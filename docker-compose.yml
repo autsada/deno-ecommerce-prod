@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+    nginx:
+        build:
+            dockerfile: Dockerfile.dev
+            context: ./nginx
+        restart: always
+        depends_on:
+            - frontend
+            - backend
+        ports:
+            - "80:80"
+    frontend:
+        build:
+            dockerfile: Dockerfile.dev
+            context: ./frontend
+        volumes:
+            - /app/node_modules
+            - ./frontend:/app
+
+        container_name: frontend
+        env_file:
+            - ./env/frontend.env
+    backend:
+        build:
+            dockerfile: Dockerfile.dev
+            context: ./backend
+        volumes:
+            - ./backend:/app
+        container_name: backend
+        env_file:
+            - ./env/backend.env
