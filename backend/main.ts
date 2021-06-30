@@ -11,8 +11,6 @@ import { adminRouter } from './router/adminRouter.ts'
 import { getRefreshToken } from './middlewares/getRefreshtoken.ts'
 import { errorHandling } from './middlewares/errorHandling.ts'
 
-const PORT = Deno.env.get('PORT')
-
 // Application
 const app = new Application()
 
@@ -66,5 +64,5 @@ app.use((ctx) => {
     ctx.response.body = 'Not found.'
 })
 
-console.log(`The server is starting up at port: ${PORT}`)
-await app.listen({ port: PORT ? +PORT : 1993 })
+console.log(`The server is starting up at port: 1993`)
+await app.listen({ port: 1993 })
