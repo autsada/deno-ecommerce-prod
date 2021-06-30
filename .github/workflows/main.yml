@@ -76,7 +76,7 @@ jobs:
 
       - name: Get timestamp
         id: timestamp
-        run: echo "::set-output name=timestamp::$(date '+%s')"
+        run: echo "::set-output name=timestamp::$(date +'%s')"
 
       - name: Zip docker-compose file for sending to Beanstalk
         run: zip compose.zip docker-compose.yml
