@@ -5,13 +5,11 @@ services:
         volumes:
             - /app/node_modules
             - ./frontend:/app
-        container_name: frontend
 
     backend:
         image: ${DOCKER_HUB_USERNAME}/ecommerce-backend:latest
         volumes:
             - ./backend:/app
-        container_name: backend
 
     nginx:
         image: ${DOCKER_HUB_USERNAME}/ecommerce-nginx:latest
