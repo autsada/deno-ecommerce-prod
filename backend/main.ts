@@ -67,4 +67,4 @@ app.use((ctx) => {
 })
 
 console.log(`The server is starting up at port: ${PORT}`)
-await app.listen({ port: PORT ? +PORT : 5000 })
+await app.listen({ port: PORT ? +PORT : 1993 })
