@@ -1,7 +1,7 @@
-FROM hayd/deno:ubuntu-1.8.0
+FROM hayd/deno:1.8.0
 
 # The port that your application listens to.
-EXPOSE 1993
+# EXPOSE 1993
 
 WORKDIR /app
 

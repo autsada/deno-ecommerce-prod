@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
     backend:
+        container_name: backend
         build:
             context: .
             dockerfile: Dockerfile.dev
@@ -9,3 +10,5 @@ services:
             - "1993:1993"
         volumes:
             - ./:/app
+        env_file:
+            - ./.env

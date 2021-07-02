@@ -1,16 +1,5 @@
 version: "3.8"
 services:
-    frontend:
-        image: ${DOCKER_HUB_USERNAME}/ecommerce-frontend:latest
-        volumes:
-            - /app/node_modules
-            - ./frontend:/app
-
-    backend:
-        image: ${DOCKER_HUB_USERNAME}/ecommerce-backend:latest
-        volumes:
-            - ./backend:/app
-
     nginx:
         image: ${DOCKER_HUB_USERNAME}/ecommerce-nginx:latest
         restart: always
@@ -19,3 +8,9 @@ services:
             - backend
         ports:
             - "80:80"
+
+    frontend:
+        image: ${DOCKER_HUB_USERNAME}/ecommerce-frontend:latest
+
+    backend:
+        image: ${DOCKER_HUB_USERNAME}/ecommerce-backend:latest

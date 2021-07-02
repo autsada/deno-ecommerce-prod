@@ -1,4 +1,8 @@
-env
+backend/.env
+backend/scripts.json
+backend/README.md
+backend/create-tables.txt
 
-.env
-.env.local
+frontend/.env
+frontend/node_modules
+frontend/README.md
