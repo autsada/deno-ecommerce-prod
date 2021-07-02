@@ -12,21 +12,16 @@ import './fontawesome'
 function App() {
   const { data } = useAuth()
 
+  console.log('data: ', data)
   return (
     <BrowserRouter>
-      {data?.user ? (
-        <>
-          {isClient(data.user.role) ? (
-            <ClientApp />
-          ) : isAdmin(data.user.role) ? (
-            <AdminApp />
-          ) : (
-            <PublicApp />
-          )}
-        </>
-      ) : (
-        <PublicApp />
-      )}
+      {data ? <>
+        {data.user ? <>
+          {
+            isClient(data.user.role) ? <ClientApp /> : isAdmin(data.user.role) ? <AdminApp /> : <PublicApp />
+          }
+        </> : <PublicApp />}
+      </> : <PublicApp />}
     </BrowserRouter>
   )
 }
