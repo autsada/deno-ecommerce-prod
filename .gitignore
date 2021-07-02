@@ -4,6 +4,7 @@ frontend/.pnp.js
 
 backend/.env
 frontend/.env
+nginx/.env
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
