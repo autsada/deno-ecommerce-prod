@@ -7,13 +7,6 @@ const PGPASSWORD = Deno.env.get('PGPASSWORD')
 const PGHOST = Deno.env.get('PGHOST')
 const PGPORT = Deno.env.get('PGPORT')
 
-// const PGAPPNAME = Deno.env.get('PGAPPNAME')
-// const PGDATABASE = Deno.env.get('RDS_DB_NAME')
-// const PGUSER = Deno.env.get('RDS_USERNAME')
-// const PGPASSWORD = Deno.env.get('RDS_PASSWORD')
-// const PGHOST = Deno.env.get('RDS_HOSTNAME')
-// const PGPORT = Deno.env.get('RDS_PORT')
-
 const POOL_CONNECTIONS = 20
 
 const pool = new Pool(
@@ -22,8 +15,11 @@ const pool = new Pool(
         database: PGDATABASE,
         user: PGUSER,
         password: PGPASSWORD,
-        hostname: PGHOST,
-        port: PGPORT || 5432,
+        hostname: `${PGHOST}`,
+        port: PGPORT ? +PGPORT : 5432,
+        tls: {
+            enforce: false,
+          },
     },
     POOL_CONNECTIONS
 )
