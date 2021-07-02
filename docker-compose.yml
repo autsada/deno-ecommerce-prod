@@ -7,10 +7,12 @@ services:
             - frontend
             - backend
         ports:
-            - "80:80"
+            - "3000:80"
 
     frontend:
         image: ${DOCKER_HUB_USERNAME}/ecommerce-frontend:latest
+        environment:
+            - CHOKIDAR_USEPOLLING=true
 
     backend:
         image: ${DOCKER_HUB_USERNAME}/ecommerce-backend:latest
