@@ -2,23 +2,25 @@ version: "3.8"
 services:
     nginx:
         image: ${DOCKER_HUB_USERNAME}/ecommerce-nginx:latest
+        # image: auddyhub/ecommerce-nginx:latest
         restart: always
         depends_on:
             - frontend
             - backend
         ports:
             - "3000:80"
-        env_file:
-            - ./nginx/.env
 
     frontend:
         image: ${DOCKER_HUB_USERNAME}/ecommerce-frontend:latest
+        # image: auddyhub/ecommerce-frontend:latest
         environment:
             - CHOKIDAR_USEPOLLING=true
-        env_file:
-            - ./frontend/.env
+        # volumes:
+        #     - ./frontend:/app
+
 
     backend:
         image: ${DOCKER_HUB_USERNAME}/ecommerce-backend:latest
-        env_file:
-            - ./backend/.env
+        # image: auddyhub/ecommerce-backend:latest
+        # volumes:
+        #     - ./backend:/app
