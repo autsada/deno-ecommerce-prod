@@ -1,10 +1,12 @@
 name: Deploy multi Docker containers to Elastic Beanstalk
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
-
     types:
       - "closed"
 
