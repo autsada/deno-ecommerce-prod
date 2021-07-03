@@ -12,3 +12,4 @@ nginx/.env
 !.elasticbeanstalk/*.global.yml
 
 frontend/Dockerfile-exp
+.github/workflows/main-exp.yml
