@@ -11,7 +11,7 @@ export const useCart = () => {
 
   return useQuery<CartDetail, { message: string }>('cart', () =>
     axios({
-      url: `${process.env.REACT_APP_BACKEND_URI!}/cart`,
+      url: `/backend/cart`,
       method: 'GET',
       headers: createHeaders('json', accessToken!),
       withCredentials: true,

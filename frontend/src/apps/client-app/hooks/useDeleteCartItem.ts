@@ -23,7 +23,7 @@ export const useDeleteCartItem = ({
   >(
     ({ cartItemId }) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/cart/${cartItemId}`,
+        url: `/backend/cart/${cartItemId}`,
         method: 'DELETE',
         headers: createHeaders('json', accessToken!),
         withCredentials: true,

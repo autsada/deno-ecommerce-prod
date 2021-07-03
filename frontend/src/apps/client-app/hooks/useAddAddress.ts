@@ -20,7 +20,7 @@ export const useAddAddress = (resetForm: () => void) => {
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/addresses`,
+        url: `/backend/addresses`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         data,

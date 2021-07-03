@@ -16,7 +16,7 @@ export const useUpdateUser = (
   return useMutation<User, { message: string }, { role: Role }>(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/admin/users/${id}`,
+        url: `/backend/admin/users/${id}`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         data,

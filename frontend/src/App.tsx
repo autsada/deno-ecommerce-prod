@@ -12,7 +12,6 @@ import './fontawesome'
 function App() {
   const { data } = useAuth()
 
-  console.log('data: ', data)
   return (
     <BrowserRouter>
       {data ? <>

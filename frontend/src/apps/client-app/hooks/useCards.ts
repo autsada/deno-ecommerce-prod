@@ -15,7 +15,7 @@ export const useCards = () => {
     { message: string }
   >('cards', () =>
     axios({
-      url: `${process.env.REACT_APP_BACKEND_URI!}/checkout/list-cards`,
+      url: `/backend/checkout/list-cards`,
       method: 'GET',
       headers: createHeaders('json', accessToken!),
       withCredentials: true,

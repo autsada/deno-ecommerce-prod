@@ -11,7 +11,7 @@ export const useAddresses = () => {
 
   return useQuery<Address[], { message: string }>('addresses', () =>
     axios({
-      url: `${process.env.REACT_APP_BACKEND_URI!}/addresses`,
+      url: `/backend/addresses`,
       method: 'GET',
       headers: createHeaders('json', accessToken!),
       withCredentials: true,

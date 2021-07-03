@@ -16,7 +16,7 @@ export const useSetDefaultCard = () => {
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/checkout/set-default-card`,
+        url: `/backend/checkout/set-default-card`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         data,

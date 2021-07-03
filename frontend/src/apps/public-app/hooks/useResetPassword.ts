@@ -10,7 +10,7 @@ export const useRestPassword = () => {
     Pick<SignupData, 'email'>
   >((data) =>
     axios({
-      url: `${process.env.REACT_APP_BACKEND_URI!}/auth/reset-password`,
+      url: `/backend/auth/reset-password`,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',

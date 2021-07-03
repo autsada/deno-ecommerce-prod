@@ -11,8 +11,7 @@ export const useProducts = (page: number = 0, perPage: number) => {
     ['products', page, perPage],
     () =>
       axios({
-        url: `${process.env
-          .REACT_APP_BACKEND_URI!}/products/?q=${page}&l=${perPage}`,
+        url: `/backend/products/?q=${page}&l=${perPage}`,
         method: 'GET',
       }).then((res) => res.data),
     { keepPreviousData: true, staleTime: 1000 * 60 * 10 } // 10 mins

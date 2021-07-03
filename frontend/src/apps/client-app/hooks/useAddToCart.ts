@@ -17,7 +17,7 @@ export const useAddToCart = (setOpenDialog: (open: boolean) => void) => {
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/cart`,
+        url: `/backend/cart`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         data,

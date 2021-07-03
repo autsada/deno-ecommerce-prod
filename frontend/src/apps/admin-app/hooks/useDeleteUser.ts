@@ -23,7 +23,7 @@ export const useDeleteUser = ({
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/admin/users/${data.userId}`,
+        url: `/backend/admin/users/${data.userId}`,
         method: 'DELETE',
         headers: createHeaders('json', accessToken!),
         data,

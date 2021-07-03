@@ -23,7 +23,7 @@ export const useUpdateAddress = ({
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/addresses/${data.id}`,
+        url: `/backend/addresses/${data.id}`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         data,

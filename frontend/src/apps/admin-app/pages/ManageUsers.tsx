@@ -11,9 +11,9 @@ import { useUsers } from '../hooks/useUsers'
 import { useDeleteUser } from '../hooks/useDeleteUser'
 import { User } from '../../../types'
 
-const usersPerPage = +process.env.REACT_APP_USERS_PER_PAGE!
+const usersPerPage = 10
 
-interface Props {}
+interface Props { }
 
 const ManageUsers: React.FC<Props> = () => {
   const { user: admin } = useAppSelector(selectAuth)

@@ -13,7 +13,7 @@ export const useOrder = (orderId: string) => {
     ['admin-order', orderId],
     () =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/admin/orders/${orderId}`,
+        url: `/backend/admin/orders/${orderId}`,
         method: 'GET',
         headers: createHeaders('json', accessToken!),
         withCredentials: true,

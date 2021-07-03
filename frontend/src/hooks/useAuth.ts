@@ -14,7 +14,7 @@ export const useAuth = () => {
     'user',
     () =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/me`,
+        url: `/backend/me`,
         method: 'GET',
         headers: createHeaders('json', accessToken!),
         withCredentials: true,

@@ -5,9 +5,9 @@ import Pagination from '../components/Pagination'
 import ProductItem from '../components/ProductItem'
 import { useProducts } from '../hooks/useProducts'
 export const prodTabType = 'cat'
-export const productsPerPage = +process.env.REACT_APP_PRODUCTS_PER_PAGE_CLIENT!
+export const productsPerPage = 9
 
-interface Props {}
+interface Props { }
 
 const Index: React.FC<Props> = () => {
   const [page, setPage] = useState(1)
@@ -18,7 +18,7 @@ const Index: React.FC<Props> = () => {
 
   if (isLoading) return <Spinner color='grey' height={50} width={50} />
 
-  if (!data || data.products.length === 0)
+  if (!data || data.products?.length === 0)
     return <h2 className='header header--center'>No products</h2>
 
   const { products, totalQueries, hasMore } = data

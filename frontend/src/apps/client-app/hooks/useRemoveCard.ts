@@ -23,7 +23,7 @@ export const useRemoveCard = ({
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/checkout/remove-card`,
+        url: `/backend/checkout/remove-card`,
         method: 'DELETE',
         headers: createHeaders('json', accessToken!),
         data,

@@ -17,7 +17,7 @@ export const useSignIn = () => {
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/auth/signin`,
+        url: `/backend/auth/signin`,
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',

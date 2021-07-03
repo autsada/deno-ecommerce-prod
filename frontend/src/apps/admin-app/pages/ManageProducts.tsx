@@ -10,9 +10,9 @@ import { useProducts } from '../../../hooks/useProducts'
 import { useDeleteProduct } from '../hooks/useDeleteProduct'
 import { Product } from '../../../types'
 
-const productsPerPage = +process.env.REACT_APP_PRODUCTS_PER_PAGE_ADMIN!
+const productsPerPage = 10
 
-interface Props {}
+interface Props { }
 
 const ManageProducts: React.FC<Props> = () => {
   const [page, setPage] = useState(1)
@@ -109,9 +109,8 @@ const ManageProducts: React.FC<Props> = () => {
       {openDialog && productToDelete && (
         <AlertDialog
           header='Please confirm'
-          message={`Are you sure you want to delete the product: ${
-            productToDelete ? productToDelete?.title : 'item'
-          }?`}
+          message={`Are you sure you want to delete the product: ${productToDelete ? productToDelete?.title : 'item'
+            }?`}
           onCancel={() => {
             setProductToDelete(undefined)
             setOpenDialog(false)

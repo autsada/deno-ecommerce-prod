@@ -79,8 +79,8 @@ jobs:
         id: timestamp
         run: echo "::set-output name=timestamp::$(date +'%s')"
 
-      - name: Zip docker-compose file for sending to Beanstalk
-        run: zip compose.zip docker-compose.yml
+      # - name: Zip docker-compose file for sending to Beanstalk
+      #   run: zip compose.zip docker-compose.yml
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v16
@@ -91,4 +91,4 @@ jobs:
           environment_name: ${{ secrets.EB_ENV_NAME }}
           version_label: ${{steps.timestamp.outputs.timestamp}}
           region: ${{ secrets.EB_REGION }}
-          deployment_package: compose.zip
+          deployment_package: docker-compose.yml

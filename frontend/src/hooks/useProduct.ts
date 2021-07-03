@@ -8,7 +8,7 @@ export const useProduct = (id: string) => {
     ['product', id],
     () =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/products/${id}`,
+        url: `/backend/products/${id}`,
         method: 'GET',
       }).then((res) => res.data.product),
     { staleTime: 60000 * 10 }

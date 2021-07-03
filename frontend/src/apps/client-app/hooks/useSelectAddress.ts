@@ -16,7 +16,7 @@ export const useSelectAddress = () => {
   return useMutation<Cart, { message: string }, { addressId: string }>(
     ({ addressId }) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/checkout/select-address`,
+        url: `/backend/checkout/select-address`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         data: { addressId },

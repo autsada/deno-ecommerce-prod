@@ -17,7 +17,7 @@ export const useSignUp = () => {
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/auth/signup`,
+        url: `/backend/auth/signup`,
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',

@@ -17,7 +17,7 @@ export const useSignout = (closeDropdown: (close: boolean) => void) => {
   return useMutation<{ message: string }, { message: string }>(
     () =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/me/signout`,
+        url: `/backend/me/signout`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         withCredentials: true,

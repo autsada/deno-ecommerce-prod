@@ -23,7 +23,7 @@ export const useUpdateCart = ({
   >(
     ({ quantity, cartItemId }) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/cart/${cartItemId}`,
+        url: `/backend/cart/${cartItemId}`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         data: { quantity },

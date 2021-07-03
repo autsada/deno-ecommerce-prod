@@ -26,7 +26,7 @@ export const useCreateOrder = ({
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/orders`,
+        url: `/backend/orders`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         data,

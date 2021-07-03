@@ -15,7 +15,7 @@ export const useCheckout = (setClientSecret: (secret: string) => void) => {
   >(
     () =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/checkout`,
+        url: `/backend/checkout`,
         method: 'POST',
         headers: createHeaders('json', accessToken || ''),
         withCredentials: true,

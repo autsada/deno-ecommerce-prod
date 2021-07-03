@@ -17,7 +17,7 @@ export const useUpdateOrder = (orderId: string) => {
   >(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/admin/orders/${orderId}`,
+        url: `/backend/admin/orders/${orderId}`,
         method: 'POST',
         headers: createHeaders('json', accessToken!),
         data,

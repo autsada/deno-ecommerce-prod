@@ -10,3 +10,5 @@ nginx/.env
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+frontend/Dockerfile-exp

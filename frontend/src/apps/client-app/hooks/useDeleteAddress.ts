@@ -19,7 +19,7 @@ export const useDeleteAddress = ({
   return useMutation<string, { message: string }, { id: string }>(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/addresses/${data.id}`,
+        url: `/backend/addresses/${data.id}`,
         method: 'DELETE',
         headers: createHeaders('json', accessToken!),
         withCredentials: true,

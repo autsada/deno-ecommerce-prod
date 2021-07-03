@@ -23,8 +23,7 @@ export const useDeleteProduct = ({
   >(
     ({ productId }) =>
       axios({
-        url: `${process.env
-          .REACT_APP_BACKEND_URI!}/admin/products/${productId}`,
+        url: `/backend/admin/products/${productId}`,
         method: 'DELETE',
         headers: createHeaders('json', accessToken!),
         withCredentials: true,

@@ -13,7 +13,7 @@ export const useAddProduct = (setOpenProductForm: (open: boolean) => void) => {
   return useMutation<Product, { message: string }, FormData>(
     (data) =>
       axios({
-        url: `${process.env.REACT_APP_BACKEND_URI!}/admin/products`,
+        url: `/backend/admin/products`,
         method: 'POST',
         headers: createHeaders('form-data', accessToken!),
         data,

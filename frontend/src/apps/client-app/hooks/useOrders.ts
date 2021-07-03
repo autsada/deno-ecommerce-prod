@@ -11,7 +11,7 @@ export const useOrders = () => {
 
   return useQuery<OrderDetail[], { message: string }>('orders', () =>
     axios({
-      url: `${process.env.REACT_APP_BACKEND_URI!}/orders`,
+      url: `/backend/orders`,
       method: 'GET',
       headers: createHeaders('json', accessToken!),
       withCredentials: true,
