@@ -13,3 +13,4 @@ nginx/.env
 
 frontend/Dockerfile-exp
 .github/workflows/main-exp.yml
+docker-compose.prod.yml
