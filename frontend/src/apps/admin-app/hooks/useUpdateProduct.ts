@@ -23,7 +23,7 @@ export const useUpdateProduct = ({
   >(
     ({ data, productId }) =>
       axios({
-        url: `backend/admin/products/${productId}`,
+        url: `/backend/admin/products/${productId}`,
         method: 'POST',
         headers: createHeaders('form-data', accessToken!),
         data,

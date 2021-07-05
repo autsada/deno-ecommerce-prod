@@ -16,7 +16,7 @@ export const useUsers = (page: number = 0, perPage: number) => {
     ['users', page, perPage],
     () =>
       axios({
-        url: `backend/admin/users/?q=${page}&l=${perPage}`,
+        url: `/backend/admin/users/?q=${page}&l=${perPage}`,
         method: 'GET',
         headers: createHeaders('json', accessToken!),
         withCredentials: true,
