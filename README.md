@@ -25,8 +25,8 @@ http://ecommerce-env-1.eba-ih2n93pk.ap-southeast-1.elasticbeanstalk.com/
 - 5555555555554444
 
 **Acess admin area**
-email: ```alan@test.com```
-password: ```abc123```
+- email: ```alan@test.com```
+- password: ```abc123```
 
 ## Deployment
 - Dcoker
