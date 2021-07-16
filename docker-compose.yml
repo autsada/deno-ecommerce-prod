@@ -1,6 +1,8 @@
 version: "3.8"
 services:
     nginx:
+        env_file:
+            - .env
         image: ${DOCKER_HUB_USERNAME}/ecommerce-nginx:latest
         restart: always
         depends_on:
@@ -10,14 +12,14 @@ services:
             - "80:80"
 
     frontend:
-        image: ${DOCKER_HUB_USERNAME}/ecommerce-frontend:latest
         env_file:
             - .env
+        image: ${DOCKER_HUB_USERNAME}/ecommerce-frontend:latest
 
     backend:
-        image: ${DOCKER_HUB_USERNAME}/ecommerce-backend:latest
         env_file:
             - .env
+        image: ${DOCKER_HUB_USERNAME}/ecommerce-backend:latest
 
 
 
