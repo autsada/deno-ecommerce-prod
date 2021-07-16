@@ -1,7 +1,7 @@
 version: "3.8"
 services:
     nginx:
-        image: auddyhub/ecommerce-nginx:latest
+        image: ${DOCKER_HUB_USERNAME}/ecommerce-nginx:latest
         restart: always
         depends_on:
             - frontend
@@ -10,14 +10,31 @@ services:
             - "80:80"
 
     frontend:
-        image: auddyhub/ecommerce-frontend:latest
-        env_file:
-            - .env
+        image: ${DOCKER_HUB_USERNAME}/ecommerce-frontend:latest
+        environment:
+            - CHOKIDAR_USEPOLLING=true
 
     backend:
-        image: auddyhub/ecommerce-backend:latest
-        env_file:
-            - .env
+        image: ${DOCKER_HUB_USERNAME}/ecommerce-backend:latest
+        environment:
+            - PORT=${PORT}
+            - PGDATABASE=${PGDATABASE}
+            - PGUSER=${PGUSER}
+            - PGPASSWORD=${PGPASSWORD}
+            - PGHOST=${PGHOST}
+            - PGPORT=${PGPORT}
+            - PGAPPNAME=${PGAPPNAME}
+            - TK_REFRESH_KEY=${TK_REFRESH_KEY}
+            - TK_ACCESS_KEY=${TK_ACCESS_KEY}
+            - TK_NAME=${TK_NAME}
+            - SENDGRID_API_ENDPOINT=${SENDGRID_API_ENDPOINT}
+            - SENDGRID_API_KEY=${SENDGRID_API_KEY}
+            - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
+            - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
+            - CLOUDINARY_BASE_URL=${CLOUDINARY_BASE_URL}
+            - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+            - STRIPE_CUSTOMERS_URL=${STRIPE_CUSTOMERS_URL}
+            - DOCKER_HUB_USERNAME=${DOCKER_HUB_USERNAME}
 
 
 
