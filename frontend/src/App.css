@@ -1523,17 +1523,8 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 735px) {
-  .modal--add-product {
-    position: relative;
-    top: 0;
-    width: 50%;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .modal--add-product {
-    position: fixed;
     width: 90%;
   }
 }
