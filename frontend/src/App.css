@@ -250,7 +250,6 @@
 
 @media screen and (max-width: 735px) {
   .modal {
-    position: relative;
     top: 0;
   }
 }
