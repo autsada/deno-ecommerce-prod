@@ -788,6 +788,12 @@
   }
 }
 
+@media screen and (max-width: 735px) {
+  .modal--auth-form {
+    width: 50%;
+  }
+}
+
 /* Products Page */
 .page--products {
   height: 100%;
@@ -854,6 +860,12 @@
   }
   .products-category {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1329,6 +1341,12 @@
   }
 }
 
+@media screen and (max-width: 735px) {
+  .orders-tabs {
+    width: 60%;
+  }
+}
+
 /* Order Item Details Page */
 .page--order-details {
   position: relative;
@@ -1377,6 +1395,13 @@
 @media screen and (max-width: 600px) {
   .page--order-details {
     width: 100%;
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .page--order-details {
+    width: 80%;
     padding: 0 0.5rem;
   }
 }
