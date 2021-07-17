@@ -248,6 +248,13 @@
   text-align: center;
 }
 
+@media screen and (max-width: 735px) {
+  .modal {
+    position: absolute;
+    top: 0;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .modal--dialog {
     width: 90%;
@@ -655,6 +662,13 @@
   background-color: rgba(88, 97, 116, 1);
 }
 
+@media screen and (max-width: 735px) {
+  .page--sidebar {
+    position: absolute;
+    height: 50rem
+  }
+}
+
 @media screen and (max-width: 600px) {
   /* Navbar */
   .head {
@@ -852,6 +866,12 @@
   text-align: center;
 }
 
+@media screen and (max-width: 735px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .products {
     grid-template-columns: 1fr;
@@ -860,12 +880,6 @@
   }
   .products-category {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 735px) {
-  .products {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1299,6 +1313,12 @@
   width: 20%;
 }
 
+@media screen and (max-width: 735px) {
+  .orders-tabs {
+    width: 60%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .page--orders {
     width: 100%;
@@ -1338,12 +1358,6 @@
   .manage-order-btn--mobile {
     width: 100%;
     font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 735px) {
-  .orders-tabs {
-    width: 60%;
   }
 }
 
@@ -1392,16 +1406,16 @@
   width: 50%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 735px) {
   .page--order-details {
-    width: 100%;
+    width: 80%;
     padding: 0 0.5rem;
   }
 }
 
-@media screen and (max-width: 735px) {
+@media screen and (max-width: 600px) {
   .page--order-details {
-    width: 80%;
+    width: 100%;
     padding: 0 0.5rem;
   }
 }
