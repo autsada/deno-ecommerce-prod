@@ -56,7 +56,7 @@ const SingleUser: React.FC<Props> = ({
       </td>
 
       {/* CreatedAt */}
-      <td className='table-cell'>{formatDate(created_at)}</td>
+      <td className='table-cell table-cell--hide'>{formatDate(created_at)}</td>
 
       {/* Role - Client */}
       <td className='table-cell'>
@@ -167,7 +167,7 @@ const SingleUser: React.FC<Props> = ({
             )}
           </td>
 
-          <td className='table-cell' style={{ width: '6%' }}>
+          <td className='table-cell' style={{ width: '15%' }}>
             {role !== 'SUPER_ADMIN' && (
               <FontAwesomeIcon
                 icon={['fas', 'trash-alt']}

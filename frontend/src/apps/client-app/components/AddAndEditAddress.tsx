@@ -135,6 +135,7 @@ const AddAndEditAddress: React.FC<Props> = ({
 
       <Button
         width='100%'
+        height='4rem'
         disabled={isLoading || updateLoading}
         loading={isLoading || updateLoading}
       >

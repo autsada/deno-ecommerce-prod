@@ -58,6 +58,7 @@ const ShippingAddress: React.FC<Props> = ({
 
       <Button
         width='100%'
+        height='4rem'
         className='btn--orange'
         style={{ margin: '1rem 0' }}
         onClick={handleSelectAddress}
