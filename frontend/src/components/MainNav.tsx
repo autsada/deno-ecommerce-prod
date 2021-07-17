@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Button from './Button'
 
-interface Props {}
+interface Props { }
 
 const MainNav: React.FC<Props> = ({ children }) => {
   return (
@@ -12,7 +12,7 @@ const MainNav: React.FC<Props> = ({ children }) => {
       <div className='head__section'>
         <div className='head__logo'>
           <NavLink to='/'>
-            <h2 className='header header--logo'>AwesomeShop</h2>
+            <h1 className='header header--logo'>azisso</h1>
           </NavLink>
         </div>
 
@@ -27,7 +27,7 @@ const MainNav: React.FC<Props> = ({ children }) => {
               className='clear-search'
             />
           </div>
-          <Button className='btn--search'>SEARCH</Button>
+          <Button className='btn--search' height='4rem'>SEARCH</Button>
         </div>
 
         <nav className='head__navbar'>{children}</nav>

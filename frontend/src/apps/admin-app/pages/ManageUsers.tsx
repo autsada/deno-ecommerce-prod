@@ -72,11 +72,11 @@ const ManageUsers: React.FC<Props> = () => {
             <th className='table-cell' style={{ width: '20%' }} rowSpan={2}>
               Email
             </th>
-            <th className='table-cell' rowSpan={2}>
+            <th className='table-cell table-cell--hide' rowSpan={2}>
               Created At
             </th>
 
-            <th className='table-cell' style={{ width: '25%' }} colSpan={3}>
+            <th className='table-cell' style={{ width: '30%' }} colSpan={3}>
               Role
             </th>
 
@@ -84,7 +84,7 @@ const ManageUsers: React.FC<Props> = () => {
               Edit
             </th>
 
-            <th className='table-cell' style={{ width: '6%' }} rowSpan={2}>
+            <th className='table-cell' style={{ width: '15%' }} rowSpan={2}>
               Delete
             </th>
           </tr>

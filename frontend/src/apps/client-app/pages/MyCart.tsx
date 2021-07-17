@@ -14,7 +14,7 @@ import {
   formatAmount,
 } from '../../../utils/helpers'
 
-interface Props {}
+interface Props { }
 
 const MyCart: React.FC<Props> = () => {
   const [cartItemToDelete, setCartItemToDelete] =
@@ -90,6 +90,7 @@ const MyCart: React.FC<Props> = () => {
 
         <Button
           width='100%'
+          height='4rem'
           className='btn--orange'
           style={{ margin: '1rem 0' }}
           onClick={() => history.push('/payment/shipping-addresses')}

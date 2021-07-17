@@ -45,7 +45,8 @@ const ManageProducts: React.FC<Props> = () => {
       <div className='manage-products__section'>
         <Button
           className='btn--orange'
-          width='12rem'
+          width='15rem'
+          height='4rem'
           onClick={() => setOpenProductForm(true)}
         >
           Add new product

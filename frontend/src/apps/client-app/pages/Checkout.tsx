@@ -23,7 +23,7 @@ import {
   calculateCartQuantity,
 } from '../../../utils/helpers'
 
-interface Props {}
+interface Props { }
 
 const Checkout: React.FC<Props> = () => {
   const [clientSecret, setClientSecret] = useState('')
@@ -130,9 +130,9 @@ const Checkout: React.FC<Props> = () => {
     let paymentMethod:
       | string
       | Pick<
-          CreatePaymentMethodCardData,
-          'card' | 'billing_details' | 'metadata' | 'payment_method'
-        >
+        CreatePaymentMethodCardData,
+        'card' | 'billing_details' | 'metadata' | 'payment_method'
+      >
       | undefined
 
     if (card.type === 'new') {
@@ -232,7 +232,7 @@ const Checkout: React.FC<Props> = () => {
 
                 <div style={{ width: '30%' }}>
                   {method.id ===
-                  cards.customer?.invoice_settings.default_payment_method ? (
+                    cards.customer?.invoice_settings.default_payment_method ? (
                     <p className='paragraph--center paragraph--focus'>
                       Default
                     </p>
@@ -282,40 +282,36 @@ const Checkout: React.FC<Props> = () => {
               />
 
               <h4
-                className='paragraph paragraph--bold'
-                style={{ width: '30%' }}
+                className='paragraph paragraph--bold paragraph--new-card'
+                style={{ width: '40%' }}
               >
                 Use new card
               </h4>
 
-              <p className='paragraph' style={{ width: '5%' }}>
+              <p className='paragraph' style={{ width: '10%' }}>
                 {' '}
               </p>
 
-              <div className='new-card__logo' style={{ width: '45%' }}>
+              <div className='new-card__logo' style={{ width: '40%' }}>
                 <FontAwesomeIcon
                   icon={['fab', 'cc-visa']}
-                  size='1x'
+                  size='lg'
                   style={{ margin: '0 0.5rem' }}
                   color='#206CAB'
                 />
                 <FontAwesomeIcon
                   icon={['fab', 'cc-mastercard']}
-                  size='1x'
+                  size='lg'
                   style={{ margin: '0 0.5rem' }}
                   color='#EB2230'
                 />
                 <FontAwesomeIcon
                   icon={['fab', 'cc-amex']}
-                  size='1x'
+                  size='lg'
                   style={{ margin: '0 0.5rem' }}
                   color='#099DD9'
                 />
               </div>
-
-              <p className='paragraph' style={{ width: '10%' }}>
-                {' '}
-              </p>
             </label>
 
             {card.type === 'new' && (
@@ -440,6 +436,7 @@ const Checkout: React.FC<Props> = () => {
         <div className='summary__section'>
           <Button
             width='100%'
+            height='4rem'
             className='btn--orange btn--payment'
             onClick={handleClickBtn}
             disabled={!stripe || !card || disabled || processing}

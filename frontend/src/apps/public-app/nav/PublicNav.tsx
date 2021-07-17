@@ -6,7 +6,7 @@ import { useAppDispatch } from '../../../store/store'
 import { setModal } from '../../../store/slices/modalSlice'
 import { useAuth } from '../../../hooks/useAuth'
 
-interface Props {}
+interface Props { }
 
 const PublicNav: React.FC<Props> = () => {
   const dispatch = useAppDispatch()
@@ -23,13 +23,13 @@ const PublicNav: React.FC<Props> = () => {
               className='btn--sign'
               onClick={() => dispatch(setModal('signin'))}
             >
-              Sign in
+              SIGN IN
             </Button>
             <Button
-              className='btn--sign'
+              className='btn--sign btn--hide'
               onClick={() => dispatch(setModal('signup'))}
             >
-              Sign up
+              SIGN UP
             </Button>
           </>
         )}

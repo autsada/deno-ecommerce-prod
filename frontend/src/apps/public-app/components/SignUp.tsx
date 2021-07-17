@@ -9,7 +9,7 @@ import { setModal } from '../../../store/slices/modalSlice'
 import { useSignUp } from '../hooks/useSignUp'
 import { SignupData } from '../../../types'
 
-interface Props {}
+interface Props { }
 
 const SignUp: React.FC<Props> = () => {
   const dispatch = useAppDispatch()
@@ -34,9 +34,9 @@ const SignUp: React.FC<Props> = () => {
           &times;
         </div>
 
-        <h3 className='header--center paragraph--orange'>
+        <h2 className='header--center paragraph--orange'>
           Sign up to AwesomeShop
-        </h3>
+        </h2>
 
         <SocialMediaLogin />
 
@@ -96,6 +96,7 @@ const SignUp: React.FC<Props> = () => {
 
           <Button
             width='100%'
+            height='4rem'
             style={{ margin: '0.5rem 0' }}
             disabled={isLoading}
             loading={isLoading}
