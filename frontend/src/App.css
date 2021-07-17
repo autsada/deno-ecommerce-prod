@@ -251,11 +251,17 @@
 @media screen and (max-width: 735px) {
   .modal {
     top: 0;
-    transform: translate(0, -50%);
+    transform: translate(-50%, 0);
   }
 }
 
 @media screen and (max-width: 600px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .modal--dialog {
     width: 90%;
   }
