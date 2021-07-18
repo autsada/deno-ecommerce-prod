@@ -480,10 +480,6 @@
 .head__navbar {
   width: 30%;
   height: 100%;
-  padding-left: 1rem;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .navbar {
@@ -498,6 +494,9 @@
 
 .navbar__lists {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .list {
@@ -516,6 +515,7 @@
 }
 
 .list--cart {
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -671,6 +671,10 @@
 }
 
 @media screen and (max-width: 735px) {
+  .list--cart {
+    width: 100%;
+  }
+
   .page--sidebar {
     position: absolute;
     height: 50rem
@@ -1207,6 +1211,7 @@
   height: 100%;
   border: none;
   color: blue;
+  box-shadow: none;
 }
 
 .StripeElement {
