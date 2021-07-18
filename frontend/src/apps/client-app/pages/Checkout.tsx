@@ -337,7 +337,7 @@ const Checkout: React.FC<Props> = () => {
                   <CardElement
                     options={{
                       style: {
-                        base: { color: 'blue', iconColor: 'blue' },
+                        base: { color: 'blue', iconColor: 'blue', textAlign: 'center' },
                         invalid: { color: 'red', iconColor: 'red' },
                       },
                     }}
