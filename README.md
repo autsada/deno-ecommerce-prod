@@ -1,7 +1,7 @@
 # Full-Stack eCommerce App
 
 ## Website
-http://ecommerce-env-1.eba-ih2n93pk.ap-southeast-1.elasticbeanstalk.com/
+https://www.azisso.com
 
 ## Technologies Stack
 
