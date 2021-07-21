@@ -14,7 +14,7 @@ const PublicNav: React.FC<Props> = () => {
 
   return (
     <ul className='navbar'>
-      <div className='navbar__profile'>
+      <div className='navbar__profile' style={{ width: '100%' }}>
         {isLoading ? (
           <Spinner color='grey' />
         ) : (
