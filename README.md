@@ -7,7 +7,7 @@ https://www.azisso.com
 
 **Backend**
 - Deno
-- PostgreSQL
+- PostgreSQL ( AWS RDS )
 
 **Frontend**
 - React
@@ -29,10 +29,9 @@ https://www.azisso.com
 - password: ```abc123```
 
 ## Deployment
-- Dcoker
+- Docker
 - Github Actions
 - AWS Elastic Beanstalk
-- AWS RDS
 
 ## Clone and Test Locally
 1. Create postgreSQL database locally.
