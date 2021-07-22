@@ -21,7 +21,7 @@ const SignUp: React.FC<Props> = () => {
   const { mutate: signup, isLoading, error } = useSignUp()
 
   return (
-    <>
+    <div data-testid='auth-modal'>
       <div className='backdrop' onClick={() => dispatch(setModal('close'))}>
         {' '}
       </div>
@@ -30,11 +30,12 @@ const SignUp: React.FC<Props> = () => {
         <div
           className='modal-close'
           onClick={() => dispatch(setModal('close'))}
+          data-testid='modal-close'
         >
           &times;
         </div>
 
-        <h2 className='header--center paragraph--orange'>
+        <h2 className='header--center paragraph--orange' data-testid='auth-form-header'>
           Sign up to AwesomeShop
         </h2>
 
@@ -45,11 +46,12 @@ const SignUp: React.FC<Props> = () => {
           Or sign up with an email
         </p>
 
-        <form className='form' onSubmit={handleSubmit((data) => signup(data))}>
+        <form className='form' onSubmit={handleSubmit((data) => signup(data))} data-testid='auth-form'>
           <Input
             label='Username'
             placeholder='Your username'
             error={errors.username?.message}
+            data-testid='input-username'
             {...register('username', {
               required: 'Username is required.',
               minLength: {
@@ -67,6 +69,7 @@ const SignUp: React.FC<Props> = () => {
             label='Email'
             placeholder='Your email'
             error={errors.email?.message}
+            data-testid='input-email'
             {...register('email', {
               required: 'Email is required.',
               pattern: {
@@ -81,6 +84,7 @@ const SignUp: React.FC<Props> = () => {
             label='Password'
             placeholder='Your password'
             error={errors.password?.message}
+            data-testid='input-password'
             {...register('password', {
               required: 'Password is required.',
               minLength: {
@@ -100,6 +104,7 @@ const SignUp: React.FC<Props> = () => {
             style={{ margin: '0.5rem 0' }}
             disabled={isLoading}
             loading={isLoading}
+            data-testid='auth-submit-btn'
           >
             Submit
           </Button>
@@ -120,7 +125,7 @@ const SignUp: React.FC<Props> = () => {
           instead.
         </p>
       </div>
-    </>
+    </div>
   )
 }
 
