@@ -1,7 +1,6 @@
 # Full-Stack eCommerce App
 
 ## Website
-https://www.azisso.com
 
 ## Technologies Stack
 
